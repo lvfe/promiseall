@@ -5,3 +5,10 @@ all([PROMISE]).then(res=>{
 })
 
 2. max concurrent 
+const decorator = new requestDecorate(2);
+decorator.add(asyncFn).then(res=>{});
+decorator.add(asyncFn).then(res=>{});
+decorator.add(asyncFn).then(res=>{});
+decorator.add(asyncFn).then(res=>{});
+
+1,2 。。。。3,4

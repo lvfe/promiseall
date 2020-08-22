@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+</head>
+<body>
+    <script id="worker" type="app/worker">
+        addEventListener('message', function(e){
+            console.log(e.data);
+            postMessage('reading tech pro')
+        }, false)
+    </script>
+    <script type="text/javascript">
+        var blob = new Blob([document.querySelector('#worker').textContent])
+        var url = window.URL.createObjectURL(blob)
+        var worker = new Worker(url)
+
+        worker.postMessage('hello');
+        worker.onmessage = function(e){
+            console.log('on message', e.data);
+        }
+    </script>
+</body>
+</html>
