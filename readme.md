@@ -12,3 +12,6 @@ decorator.add(asyncFn).then(res=>{});
 decorator.add(asyncFn).then(res=>{});
 
 1,2 。。。。3,4
+
+3. webworker practice;
+on same html file or different js
