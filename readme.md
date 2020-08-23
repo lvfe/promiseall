@@ -26,3 +26,17 @@ function add(a, b) {
  }
  console.log(sqr(add(1,2)));
  console.log(compose(add, sqr)(1,2))
+
+ 3. middleware function
+ const middles = [
+    async next => {
+        console.log('1 start')
+        next()
+        console.log('4 start')
+    },
+    async next => {
+        console.log('2 start')
+        next()
+        console.log('3 start')
+    }];
+console.log(composem(middles)());
