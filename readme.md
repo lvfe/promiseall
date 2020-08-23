@@ -15,3 +15,14 @@ decorator.add(asyncFn).then(res=>{});
 
 3. webworker practice;
 on same html file or different js
+
+4. compose function
+compose(fn1, fn2)(..args)
+function add(a, b) {
+     return a+b;
+ }
+ function sqr(a) {
+     return a*a;
+ }
+ console.log(sqr(add(1,2)));
+ console.log(compose(add, sqr)(1,2))
