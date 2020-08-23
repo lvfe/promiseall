@@ -5,12 +5,5 @@ const compose = (...[first,...second])=> (...args) => {
     })
     return ret;
 }
-function add(a, b) {
-    return a+b;
-}
-function sqr(a) {
-    return a*a;
-}
-console.log(sqr(add(1,2)));
-console.log(compose(add, sqr)(1,2))
+// 
 export default compose;
